@@ -1,0 +1,30 @@
+<% include header %>
+<form action="/" method="post" class="ui form">
+    <div class="field">
+        <label for="nom">Nom</label>
+        <input name="nom" id="nom"></input>
+    </div>
+    <button type="submit" class="ui blue labeled submit icon button">
+        <i class="icon edit"></i>Envoyer
+    </button>
+</form>
+
+<div class="ui comments">
+    <h3 class="ui dividing header">Liste des élèves</h3>
+    <% for  (eleve of eleve) {%>
+
+        <div class="comment">
+
+            <div class="avatar">
+                
+            </div>
+            <div class="content">
+                <div class="test"><%= eleve.nom %></div>
+            </div>
+        </div>
+
+    <%}%>
+</div>
+
+<% include footer %>
+ 
